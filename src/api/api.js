@@ -1,5 +1,8 @@
 // 함수 군단
 import courses from './data.json';
+// import question from './dataquestion.json';
+
+// import {courses,querystion} from './data.json';
 
  export function getCourses(keyword){
   if(!keyword) return courses;
