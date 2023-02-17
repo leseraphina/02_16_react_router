@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import ProductList from './pages/ProductList';
 import Product from './pages/Product';
 import NotFound from './pages/NotFound';
+import WishList from "./pages/WishList";
 // import
 
 function Main(){
@@ -17,12 +18,8 @@ function Main(){
         <Route index element={<ProductList/>} />
         <Route path=":courseSlug" element={<Product />} />
       </Route>
-      {/* <Route path="question">
-        <Route index element={} />
-        <Route path=":이름" element={} />
-      </Route> */}
       <Route path="*" element={<NotFound />} />
-      {/* 추가분 */}
+      <Route path="wishlist" element={<WishList />} />
     </Routes>
    </App>
    </BrowserRouter>

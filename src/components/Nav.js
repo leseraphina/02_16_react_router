@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from '../assets/logo.png';
 
 import './Nav.css';
-
+// ? true 다음을 진행할거야
+// 삼항연산자 
 function Nav(){
+  function getLinkStyle({isActive}){
+    return {
+      textDecoration:isActive ? 'underline':'' 
+    }
+  }
   return (
 <header>
   <div>
@@ -15,7 +21,12 @@ function Nav(){
     <nav>
       <ul>
         <li>
-          <Link to="/list">제품</Link>
+          <NavLink to="/list " style={getLinkStyle}>제품</NavLink>
+          {/* <Link to="/list">제품</Link> */}
+        </li>
+        <li>
+          <NavLink to="/wishlist" style={getLinkStyle}>저장소</NavLink>
+          {/* <Link to="/wishlist">저장소</Link> */}
         </li>
       </ul>
     </nav>
